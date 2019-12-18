@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="25dp"
+    android:layout_height="45dp">
+    <!--背景为透明的-->
+
+    <FrameLayout
+        android:id="@+id/rl_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/arrow_left" />
+    </FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+    <ImageView
+        android:id="@+id/iv_add_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="6dp"
+        android:padding="10dp"
+        android:src="@drawable/home_plus"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+</RelativeLayout>

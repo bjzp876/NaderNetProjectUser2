@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="82dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/deviceadd_category_list_local_device_name_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="82dp"
+        android:maxLines="2"
+        android:textColor="@color/page_index_title_color"
+        android:textSize="14dp" />
+
+    <ImageView
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:layout_gravity="right"
+        android:scaleType="centerInside"
+        android:src="@drawable/deviceadd_category_list_add_btn_bg" />
+
+    <!-- this FrameLayout used to make TextView center-->
+    <FrameLayout
+        android:id="@+id/deviceadd_category_list_local_device_add_fl"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:layout_gravity="right">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="添加"
+            android:textColor="@color/page_index_main_color"
+            android:textSize="10dp" />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="24dp"
+        android:background="@color/page_index_lin_color" />
+
+</FrameLayout>

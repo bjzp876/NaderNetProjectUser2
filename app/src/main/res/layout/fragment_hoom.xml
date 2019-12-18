@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:id="@+id/refresh">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!-- 新用户 -->
+        <RelativeLayout
+            android:id="@+id/rl_null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+            <RelativeLayout
+                android:id="@+id/rl_add"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="@dimen/dp_80"
+                android:background="@drawable/circle_white"
+                android:layout_centerInParent="true">
+                <ImageView
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:background="@drawable/home_plus"
+                    android:layout_centerInParent="true"/>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_9"
+                android:layout_centerInParent="true"
+                android:layout_below="@id/rl_add"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_14"
+                android:text="添加房屋"/>
+        </RelativeLayout>
+
+        <!-- 老用户 -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_25">
+    <ImageView
+        android:id="@+id/iv_add_img"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginRight="@dimen/dp_6"
+        android:src="@drawable/img_add" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_toLeftOf="@id/iv_add_img">
+        <ImageView
+            android:id="@+id/iv_msg_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp_10"
+            android:src="@drawable/message" />
+
+
+        <View
+            android:id="@+id/view_hint"
+            android:layout_width="@dimen/dp_10"
+            android:layout_height="@dimen/dp_10"
+            android:layout_alignParentTop="true"
+            android:layout_alignTop="@id/iv_msg_img"
+            android:layout_marginLeft="-13dp"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_toRightOf="@id/iv_msg_img"
+            android:background="@drawable/bg_for_notify"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_head_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_4"
+                android:padding="@dimen/dp_10"
+                android:src="@drawable/profile" />
+            <TextView
+                android:id="@+id/tv_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_24"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:maxLines="1"
+                android:maxLength="8"
+                android:text="小良的家"/>
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_scene"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_41"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/MyTextViewNoClickEffect"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:gravity="center_vertical|left"
+                                android:text="常用场景"
+                                android:textColor="@color/white" />
+
+                        </RelativeLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rv_scene"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </android.support.v7.widget.RecyclerView>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_40"
+                        android:layout_marginBottom="@dimen/dp_35"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/MyTextViewNoClickEffect"
+                            android:layout_width="match_parent"
+                            android:gravity="left|center_vertical"
+                            android:text="@string/str_common_devices"
+                            android:textColor="@color/white" />
+
+                        <com.nader.intelligent.view.MyGridView
+                            android:id="@+id/gv_for_common_devices"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginLeft="@dimen/dp_13"
+                            android:layout_marginRight="@dimen/dp_13"
+                            android:horizontalSpacing="@dimen/dp_8"
+                            android:numColumns="2"
+                            android:verticalSpacing="@dimen/dp_8" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

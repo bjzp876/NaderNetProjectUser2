@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="red">#ff0000</color>
+    <color name="line_color">#DCE0EA</color>
+    <color name="text_gray">#AAAAAA</color>
+    <color name="text_black">#4A4A4A</color>
+    <color name="text_main_gray">#C4C4C4</color>
+    <color name="bt_blue">#29CDFF</color>
+    <color name="text_blue">#007AFF</color>
+    <color name="bg_network">#fff6f6f6</color>
+    <color name="bt_exit">#FF7979</color>
+    <color name="dividerColor">#ccc</color>
+    <color name="text_green">#1FC88B</color>
+    <color name="text_red">#FF3838</color>
+    <color name="bg_page">#F5F6F7</color>
+    <color name="text_check">#13B9FC</color>
+    <color name="text_uncheck">#9B9B9B</color>
+    <color name="text_color">#4A4A4A</color>
+    <color name="color_for_common_secnes_off">#72809d</color>
+    <color name="color_for_common_secnes_on" tools:ignore="MissingDefaultResource">#13B9FC</color>
+    <color name="scan_text_white">#EEEEEE</color>
+    <color name="safe_off">#A7AEBE</color>
+    <color name="color_gray">#CCCCCC</color>
+    <color name="harf_white">#80FFFFFF</color>
+
+    <color name="page_index_background_color">#F6F6F6</color>
+    <color name="page_index_title_color">#333333</color>
+    <color name="page_index_lin_color">#EDEDED</color>
+    <color name="page_index_black_btm">#88000000</color>
+    <color name="page_index_bleck_3">#333333</color>
+    <color name="page_index_room_name_color">#FFFFFF</color>
+    <color name="page_index_bleck_9">#999999</color>
+    <color name="page_index_main_color">#1FC88B</color>
+    <color name="text_address_bg">#E7EBF3</color>
+
+</resources>

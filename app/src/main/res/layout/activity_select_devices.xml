@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_index_background_color"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_25"
+        android:background="@color/white"/>
+    <com.aliyun.iot.homelink.si.component.TopBar
+        android:id="@+id/add_room_select_equipment_topbar"
+        style="@style/TopBar_Style_LeftImgeRightText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        app:top_bar_right_string="@string/page_index_complete"
+        app:top_bar_title="@string/page_index_add_room_select_equipment_title"></com.aliyun.iot.homelink.si.component.TopBar>
+
+    <TextView
+        android:id="@+id/add_room_select_equipment_count_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="9dp"
+        android:text="已添加0台设备"
+        android:textColor="@color/page_index_bleck_9"
+        android:textSize="12sp" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/add_room_select_equipment_sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/add_room_select_equipment_rev"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

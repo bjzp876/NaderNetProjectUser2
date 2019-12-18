@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nader.intelligent">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.aliyun.iot.aep.sdk.init.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        tools:replace="android:allowBackup,android:label,android:theme,android:icon"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <!-- 初始页 -->
+        <activity android:name=".activity.start.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 登录页 -->
+        <activity android:name=".activity.user.LoginActivity"
+            android:launchMode="singleTask">
+        </activity>
+        <!-- 主页 -->
+        <activity android:name=".activity.main.MainActivity"
+            android:launchMode="singleTask"/>
+
+        <!-- 房间 -->
+        <!-- 房间输入名称页 -->
+        <activity android:name=".activity.room.AddRoomNameActivity"/>
+        <!-- 选择下属设备 -->
+        <activity android:name=".activity.room.SelectDeviceForRoomActivity"/>
+        <!-- 房间设置页 -->
+        <activity android:name=".activity.room.RoomSettingActivity"/>
+
+        <!-- 设备 -->
+        <!-- 添加设备列表页 -->
+        <activity android:name=".activity.device.ADDDeviceListActivity"/>
+        <!-- 两位智能开关 -->
+        <activity android:name=".activity.device.swich.TwoSwitchActivity"/>
+        <!-- 五孔智能插座 -->
+        <activity android:name=".activity.device.swich.OutletActivity"/>
+
+        <!-- 场景 -->
+        <!-- 场景详情 -->
+        <activity android:name=".activity.scene.SceneDetailActivity"
+            android:launchMode="singleTask"
+            />
+        <!-- 场景设备列表 -->
+        <activity android:name=".activity.scene.SceneListActivity"/>
+        <!-- 日期选择页 -->
+        <activity android:name=".activity.scene.SceneDateActivity"/>
+        <!-- 场景或设备选择 -->
+        <activity android:name=".activity.scene.SceneFactorActivity"/>
+        <!-- 场景时间设置 -->
+        <activity android:name=".activity.scene.SceneTimeSelectActivity"
+            tools:ignore="DuplicateActivity" />
+        <!-- 场景状态选择 -->
+        <activity android:name=".activity.scene.SceneDeviceStateActivity"/>
+        <!-- 场景时间选择 -->
+        <activity android:name=".activity.scene.SceneChangeTimeActivity"/>
+        <!-- 场景设备属性列表 -->
+        <activity android:name=".activity.scene.SceneDeviceInfoList"/>
+        <!-- 结果场景选择页 -->
+        <activity android:name=".activity.scene.SceneActionSelectActivity"/>
+
+        <!-- 相机扫描页面 -->
+        <activity
+            android:name=".activity.scan.ScanActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.Scan"
+            tools:ignore="AppLinkUrlError">
+            <intent-filter tools:ignore="AppLinkUrlError">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="hld" />
+                <data android:host="scan" />
+            </intent-filter>
+        </activity>
+        <!-- 设备详情 -->
+        <activity android:name=".activity.device.DeviceInfoActivity"/>
+
+    </application>
+
+</manifest>

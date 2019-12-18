@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/page_index_more_bg_shape"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_170"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/pop_add_scene"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:src="@drawable/page_index_more_add_equipment_ico" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_21"
+                android:text="添加设备"
+                android:textColor="@color/page_index_title_color"
+                android:textSize="@dimen/sp_14"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pop_room_setting"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:src="@drawable/page_index_more_add_room_ico" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_21"
+                android:text="房间设置"
+                android:textColor="@color/page_index_title_color"
+                android:textSize="@dimen/sp_14"
+
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pop_share_room"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_45"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:src="@drawable/page_index_more_share_ico" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_21"
+                android:text="分享房间"
+                android:textColor="@color/page_index_title_color"
+                android:textSize="@dimen/sp_14"
+
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

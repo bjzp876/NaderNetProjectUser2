@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="480dp"
+    android:background="@drawable/bg_white">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_36">
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/sp_16"
+        android:background="@drawable/close"/>
+</RelativeLayout>
+    <WebView
+        android:id="@+id/web_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_27"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginBottom="@dimen/dp_30"></WebView>
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginRight="@dimen/dp_27"
+        android:layout_marginLeft="@dimen/dp_27"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:visibility="gone"
+        />
+</LinearLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.nader.intelligent.view.VpSwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_room_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/iv_single_bg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#00000000"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:id="@+id/ll_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_17"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_17"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:id="@+id/ll_room_tem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="@dimen/dp_17"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/room_temp" />
+
+                                <TextView
+                                    android:id="@+id/tv_temperature"
+                                    style="@style/MyTextViewNoClickEffect"
+                                    android:paddingLeft="0dp"
+                                    android:text="--℃"
+                                    android:textColor="@color/text_color" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_17"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/room_humi" />
+
+                                <TextView
+                                    android:id="@+id/tv_current_humidity"
+                                    style="@style/MyTextViewNoClickEffect"
+                                    android:paddingLeft="0dp"
+                                    android:text="--%"
+                                    android:textColor="@color/text_color" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_7"
+                                >
+                                <TextView
+                                    android:id="@+id/tv_edit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+
+                                    android:background="@drawable/bg_home_edit"
+                                    android:paddingBottom="@dimen/dp_3"
+                                    android:paddingLeft="@dimen/dp_10"
+                                    android:paddingRight="@dimen/dp_10"
+                                    android:paddingTop="@dimen/dp_3"
+                                    android:text="编辑"
+                                    android:layout_marginRight="@dimen/dp_12"
+                                    android:textColor="@color/text_color"
+                                    android:textSize="@dimen/sp_12" />
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_pm"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <TextView
+                                style="@style/MyTextViewNoClickEffect"
+                                android:text="PM2.5"
+                                android:paddingLeft="@dimen/dp_3"
+                                android:textColor="@color/text_color" />
+
+                            <TextView
+                                android:id="@+id/tv_pm25_value"
+                                style="@style/MyTextViewNoClickEffect"
+                                android:paddingLeft="0dp"
+                                android:text="-"
+                                android:textColor="@color/text_color" />
+                            <TextView
+                                android:id="@+id/tv_home1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:text="空气质量"
+                                android:textColor="@color/text_color"
+                                android:textSize="@dimen/sp_16" />
+
+                            <TextView
+                                android:id="@+id/tv_home2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                android:layout_marginTop="@dimen/dp_10"
+                                android:paddingLeft="@dimen/dp_1"
+                                android:paddingRight="@dimen/dp_1"
+                                android:layout_toRightOf="@id/tv_home1"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/sp_16" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!-- 场景 -->
+
+                    <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginBottom="20dp"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:text="情景模式"-->
+                    <!--android:textColor="@color/white" />-->
+
+                    <!--<com.nader.intelligent.view.MyGridView-->
+                    <!--android:id="@+id/gv_scene"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_margin="@dimen/dp_10"-->
+                    <!--android:horizontalSpacing="@dimen/dp_10"-->
+                    <!--android:numColumns="3"-->
+                    <!--android:verticalSpacing="@dimen/dp_10" />-->
+                    <!--</LinearLayout>-->
+
+                    <!-- 设备 -->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:text="设备"
+                            android:textColor="@color/text_color" />
+
+                        <com.nader.intelligent.view.MyGridView
+                            android:id="@+id/gv_devices"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/dp_10"
+                            android:horizontalSpacing="@dimen/dp_8"
+                            android:numColumns="2"
+                            android:verticalSpacing="@dimen/dp_8" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</com.nader.intelligent.view.VpSwipeRefreshLayout>

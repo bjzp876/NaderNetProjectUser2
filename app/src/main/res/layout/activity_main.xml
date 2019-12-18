@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_53"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        >
+
+        <LinearLayout
+            android:id="@+id/ll_homepage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5">
+
+            <ImageView
+                android:id="@+id/iv_homepage"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_3"
+                android:src="@drawable/homepage_logo_down" />
+
+            <TextView
+                android:id="@+id/tv_homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/dp_2"
+                android:text="@string/str_homepage"
+                android:textColor="@color/text_check"
+                android:textSize="@dimen/sp_10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_room"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5">
+
+            <ImageView
+                android:id="@+id/iv_room"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_3"
+                android:src="@drawable/room_up" />
+
+            <TextView
+                android:id="@+id/tv_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/dp_2"
+                android:text="@string/str_room"
+                android:textColor="@color/text_uncheck"
+                android:textSize="@dimen/sp_10" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_scene"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_5">
+
+            <ImageView
+                android:id="@+id/iv_scene"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_3"
+                android:src="@drawable/scene" />
+
+            <TextView
+                android:id="@+id/tv_scene"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="@dimen/dp_2"
+                android:text="场景"
+                android:textColor="@color/text_uncheck"
+                android:textSize="@dimen/sp_10" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_security"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:id="@+id/iv_security"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/safe_up" />
+
+            <TextView
+                android:id="@+id/tv_security"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="2dp"
+                android:text="@string/str_security"
+                android:textColor="@color/text_uncheck"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.nader.intelligent.view.NoScrollViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/ll_bottom" />
+
+
+</RelativeLayout>

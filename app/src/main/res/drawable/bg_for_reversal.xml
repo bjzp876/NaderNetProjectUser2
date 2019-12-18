@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--电机反转按钮的点击效果-->
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="@color/color_for_common_secnes_on" />
+
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="@color/color_for_common_secnes_on" />
+
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners android:radius="5dp" />
+            <solid android:color="@color/color_for_common_secnes_off" />
+
+        </shape>
+    </item>
+</selector>

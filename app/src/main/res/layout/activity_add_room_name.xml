@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/page_index_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_25"
+        android:background="@color/white"/>
+    <com.aliyun.iot.homelink.si.component.TopBar
+        android:id="@+id/page_index_common_add_new_room_name_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        style="@style/TopBar_Style_LeftImgeRightText"
+        app:top_bar_title="@string/page_index_add_room_for_name_title"
+        app:top_bar_right_color_list="@drawable/page_index_add_room_name_right_tv_colors"
+        ></com.aliyun.iot.homelink.si.component.TopBar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#FFFFFF"
+        android:layout_marginTop="38dp"
+        >
+        <EditText
+            android:id="@+id/page_index_common_add_new_room_name_input_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:hint="@string/page_index_add_room_for_name_edt_hint"
+            android:textSize="14sp"
+            android:textColorHint="#CCCCCC"
+            android:textColor="@color/page_index_bleck_3"
+            android:gravity="center_vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="10dp"
+            android:maxLines="1"
+            android:maxLength="8"
+            android:maxEms="16"
+            />
+        <ImageView
+            android:id="@+id/page_index_common_add_new_room_name_del_btn"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/page_index_input_del_ico"
+            android:scaleType="centerInside"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

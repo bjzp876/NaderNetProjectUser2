@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/backdrop"
+            android:scaleType="centerCrop"
+            tools:src="#fff" />
+
+
+        <com.nader.intelligent.view.BetterViewAnimator
+            android:id="@+id/viewAnimator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateFirstView="true"
+            android:inAnimation="@anim/slide_down_in"
+            android:outAnimation="@anim/slide_up_out"
+            android:layout_marginTop="25dp">
+
+            <LinearLayout
+                android:id="@+id/titleBar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+                <FrameLayout
+                    android:id="@+id/rl_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"
+                    >
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:src="@drawable/arrow_left" />
+                </FrameLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="场景"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/log"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:contentDescription="@string/action_log"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_log"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/add"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="@string/action_add_device"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_add" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/orderBar"
+                style="@style/actionbar"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/cancel"
+                    style="@style/action_textbutton"
+                    android:layout_gravity="start"
+                    android:text="@string/action_cancel" />
+
+                <TextView
+                    style="@style/actionbar_title"
+                    android:text="@string/label_reorder" />
+
+                <TextView
+                    android:id="@+id/save"
+                    style="@style/action_textbutton"
+                    android:layout_gravity="end"
+                    android:text="@string/action_save" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="bottom"
+                    android:background="#ccc" />
+            </FrameLayout>
+        </com.nader.intelligent.view.BetterViewAnimator>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/view_line"
+            android:layout_below="@+id/viewAnimator"
+            android:visibility="gone"
+            android:background="#ccc"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/view_line"
+            android:layout_marginTop="20dp"
+            android:overScrollMode="never"
+            tools:background="#fff" />
+    </RelativeLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>
